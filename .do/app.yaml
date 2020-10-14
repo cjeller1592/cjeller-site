@@ -1,0 +1,8 @@
+name: cjeller-site
+services:
+- environment_slug: python
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: cjeller1592/cjeller-site
+  name: cjeller-site
