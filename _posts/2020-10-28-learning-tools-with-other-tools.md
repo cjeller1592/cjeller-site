@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Learning Tools with Other Tools
-summary: I'm slowing finding that you can best understand particular tools through the lens of others.
+summary: I'm slowing finding that you can better understand tools through the lens of others.
 ---
 
-I'm slowing finding that you can best understand particular tools through the lens of others.
+I'm slowing finding that you can better understand tools through the lens of others.
 
 [Nmap](https://nmap.org/), for example, is a powerful network scanning program that I've been getting familiar with lately. The power of Nmap lies in the information it gives you about a network or IP address. So I threw caution to the wind as I used Nmap, scanning my home network and showing my wife that I found her laptop and which ports were open (there were none).
 
@@ -73,6 +73,6 @@ The VM got blocked! An Nmap version scan makes a full established TCP connection
 
 What's great about this experiment is that you can add even more tools into the mix. What if we used tcpdump to examine what happened when HoneyPort blocks an IP address that is attempting an Nmap scan? What more could we learn about tcpdump? About packet capturing? Learning tools with other tools turns learning into an ever iterative and remixable exercise — endlessly exchange one tool for another.
 
-I think learning tools with other tools is something that appealed to me even when I didn't know how to write a line of code. When music was my main pursuit, I found that I learned most about my primary instrument, the guitar, not from playing with other guitarists but other instrumentalists — drummers, bassists, trombonists, violinists. Through playing together I had a better sense of what my instrument's role was.
+I think this practice is something that appealed to me even when I didn't know how to write a line of code. When music was my main pursuit, I found that I learned most about my primary instrument, the guitar, not from playing with other guitarists but other instrumentalists — drummers, bassists, trombonists, violinists. Through playing together I had a better sense of what the guitar was capable of. Understanding the guitar meant understanding it in the context of other instruments.
 
-Perhaps that's why I love doing that with software.
+It's similar with computers. Digital improvisation happens all around us. Applications interact with cloud services which interact with the Internet which interact with packets which interact with cables — it keeps going and going and going and going. There are an infinite amount of musicians to play with and a near infinite amount of instruments to play. The thought of utilizing, let alone understanding, networks and applications and computers to their fullest potential is daunting. But we can choose to start small – one tool interacting with another tool. Follow that thread. It might just lead to everything else.
