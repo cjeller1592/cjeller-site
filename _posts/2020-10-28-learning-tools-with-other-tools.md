@@ -1,9 +1,7 @@
 ---
-
 layout: post
 title: Learning Tools with Other Tools
 description: I'm slowing finding that you can best understand particular tools through the lens of others.
-
 ---
 
 I'm slowing finding that you can best understand particular tools through the lens of others.
