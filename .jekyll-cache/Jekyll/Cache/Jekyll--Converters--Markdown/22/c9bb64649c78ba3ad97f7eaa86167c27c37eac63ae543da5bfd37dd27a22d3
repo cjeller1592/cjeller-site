@@ -1,10 +1,10 @@
-I"<p>I’ve recently stumbled across squid. No not the animal, thank goodness. The <a href="http://www.squid-cache.org/">other kind</a> of squid.</p>
+I"�<p>I’ve recently stumbled across squid. No not the animal, thank goodness. The <a href="http://www.squid-cache.org/">other kind</a> of squid.</p>
 
 <p>Squid is a server I can run in the background on a machine. Like a web server? Sort of. Squid acts as a proxy to my web browser. This means that any time I make a request to a website, it has to go through the Squid server first. In that moment, Squid can use rules I make to decide whether the request goes through. If the website is on my blocklist, for example, the request is denied.</p>
 
 <p>So what does that look like? Say I have Twitter on my block list and I try to go to twitter.com on Chrome. This is what I’d encounter:</p>
 
-<p><img src="/Users/cjeller/Library/Application Support/typora-user-images/Screen Shot 2020-11-07 at 8.42.18 PM.png" alt="Screen Shot 2020-11-07 at 8.42.18 PM" /></p>
+<p><img src="/images/Chrome-403.png" alt="" /></p>
 
 <p>If I didn’t know Squid was running, I’d think Twitter was down or something. What does <code class="language-plaintext highlighter-rouge">ERR_TUNNEL_CONNECTION_FAILED</code> mean anyway? There’s a blog post for that:</p>
 
@@ -14,7 +14,7 @@
 
 <p>Thanks <a href="https://thegeekpage.com/solved-fix-err_tunnel_connection_failed-error-in-chrome/">blog post</a>. So either my browsing data and Cookies are conspiring against Twitter alone, or Squid is working as promised. While Chrome is sparse, trying Twitter on FireFox gives me more information:</p>
 
-<p><img src="/Users/cjeller/Library/Application Support/typora-user-images/Screen Shot 2020-11-07 at 8.43.46 PM.png" alt="Screen Shot 2020-11-07 at 8.43.46 PM" /></p>
+<p><img src="/images/Mozilla-403.png" alt="" /></p>
 
 <p>That’s exactly what I’m looking for. The proxy server, Squid, is refusing connections to Twitter (because that’s how I set it up).</p>
 
@@ -33,7 +33,7 @@
 
 <p>This is the packet capture in Wireshark. My laptop is 192.168.50.39 and the Squid server is 192.168.50.102:</p>
 
-<p><img src="/Users/cjeller/Library/Application Support/typora-user-images/Screen Shot 2020-11-07 at 9.41.20 PM.png" alt="Screen Shot 2020-11-07 at 9.41.20 PM" /></p>
+<p><img src="/images/Wireshark-Squid.png" alt="Wireshark of Squid Blocking Twitter" /></p>
 
 <p>My inkling about Squid denying a TCP connection is bogus. When you look at the packet capture, a TCP connection occurs within the first three packets! It just happens between my laptop and the Squid server rather than with a web server directly. This is because, shocker, Squid is a proxy server. My laptop doesn’t connect to websites directly. Squid does so on my behalf.</p>
 
@@ -50,5 +50,4 @@
 <p>And that’s the potentially malicious side of proxies. As we saw, a proxy server acts as the intermediary between you and the web. There’s a lot that can happen between you making a request and the proxy server tunneling the TCP connection to your requested site. I could only imagine tools that mimic <a href="https://freedom.to">Freedom</a> and similiar services, assuring users that they’re only site blockers, but have seedier machinations underneath. They’re out there.</p>
 
 <p>Having a proxy can be completely mundane, like with my Squid experiment. On the other hand, proxies can act as an attack vector. They’re called man-in-the-middle attacks for a reason. This experiment barely scratches the surface of understanding what proxies do behind the scene. I’d be curious to do similar analysis to see how HTTP &amp; TCP traffic looks different with a nefarious proxy than with a proxy like Squid.</p>
-
 :ET

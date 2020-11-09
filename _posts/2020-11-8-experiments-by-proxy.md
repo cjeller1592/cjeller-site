@@ -10,7 +10,7 @@ Squid is a server I can run in the background on a machine. Like a web server? S
 
 So what does that look like? Say I have Twitter on my block list and I try to go to twitter.com on Chrome. This is what I'd encounter:
 
-![](https://i.snap.as/2YTtF4EO.png)
+![Chrome error screen for blocked Twitter](/images/Chrome-403.png)
 
 If I didn't know Squid was running, I'd think Twitter was down or something. What does `ERR_TUNNEL_CONNECTION_FAILED` mean anyway? There's a blog post for that:
 
@@ -18,7 +18,7 @@ If I didn't know Squid was running, I'd think Twitter was down or something. Wha
 
 Thanks [blog post](https://thegeekpage.com/solved-fix-err_tunnel_connection_failed-error-in-chrome/). So either my browsing data and Cookies are conspiring against Twitter alone, or Squid is working as promised. While Chrome is sparse, trying Twitter on FireFox gives me more information:
 
-![](https://i.snap.as/4dzXQsvw.png)
+![Mozilla error screen for blocked Twitter](/images/Mozilla-403.png)
 
 That's exactly what I'm looking for. The proxy server, Squid, is refusing connections to Twitter (because that's how I set it up).
 
@@ -38,7 +38,7 @@ But how do I *know* that Squid is doing this? Well, we have to peel back yet ano
 
 This is the packet capture in Wireshark. My laptop is 192.168.50.39 and the Squid server is 192.168.50.102:
 
-![](https://i.snap.as/L80Ip4WE.png)
+![Wireshark of Squid Blocking Twitter](/images/Wireshark-Squid.png)
 
 My inkling about Squid denying a TCP connection is bogus. When you look at the packet capture, a TCP connection occurs within the first three packets! It just happens between my laptop and the Squid server rather than with a web server directly. This is because, shocker, Squid is a proxy server. My laptop doesn't connect to websites directly. Squid does so on my behalf.
 
