@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Precision Digging
+title: Noisy Patterns
 summary: Journaling about how a basic search of my syslog using Splunk led to action (mostly searching Google).
 ---
 
