@@ -1,0 +1,2 @@
+I"�<p>My mom asked for my help over the weekend with troubleshooting Zoom on her laptop. The microphone wouldn’t work. She could be seen by everyone else but not heard. After monkeying around, I figured out the underlying problem. Zoom wasn’t at fault (surprise). The laptop’s OS (Windows 10) implements a privacy setting that disables microphone usage by default. Once that setting was turned off, my mother could be heard on Zoom calls.</p>
+:ET
