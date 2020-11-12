@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Noisy Patterns
-summary: Journaling about how a basic search of my syslog using Splunk led to action (mostly searching Google).
+summary: Journaling about how a basic search of my syslog led to action (mostly searching Google).
 ---
 
 I want to get more familiar with security information & event management (SIEM), so I thought the best place to start would be with system logs. I added the syslog to Splunk (which I also want to get more familiar with).

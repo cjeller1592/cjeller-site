@@ -1,0 +1,12 @@
+---
+layout: post
+title: Keep Spinning
+summary: Reflecting on how spinning up and destroying VM's is like learning to perform music.
+---
+A couple months ago, I remember being overly precious about virtual machines. This Linux box that I've spun up has to be lovingly maintained for as long as I own my laptop. Nothing bad can happen to it. I acted as if I made a covenant with VMWare to never destroy a box.
+
+I have to admit though, the first time I deleted a VM, it felt freeing. Nothing bad happened. No wrath from VMWare. I just went onto spinning up the next Kali Linux box. After this happened a couple times, I developed a looser relationship with the VM's I spun up. Not so much being careless as being more open to experimentation. Messing up is okay. You just revert to an earlier snapshot or blow the whole thing up and try again.
+
+This realization reminded me of when I was studying classical guitar. Performances were the most nerve wracking thing imaginable. I was afraid of going out there with my guitar and messing up. But here's the thing — when I messed up, it wasn't the end of the world. I learned from my lessons and took them into the next performance. This process continues indefinitely. To this day I still get nervous to perform, but I know it isn't my first gig and won't be my last. That allows me to play as well as I can without putting unnecessary pressure on myself.
+
+I suppose this is how I am trying to take learning more about Linux and Windows and cybersecurity. It isn't the first VM I spin up and it won't be my last.
