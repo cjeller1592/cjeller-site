@@ -1,4 +1,4 @@
-I"�<p>I want to get more familiar with security information &amp; event management (SIEM), so I thought the best place to start would be with system logs. I added the syslog to Splunk (which I also want to get more familiar with).</p>
+I"�<p>I want to get more familiar with security information &amp; event management (SIEM), so I thought the best place to start would be with system logs. I added the syslog to Splunk (which I also want to get more familiar with).</p>
 
 <p>From Splunk’s search bar I type out <code class="language-plaintext highlighter-rouge">sourcetype=syslog</code> and see what happens. 5018 events in one week. Damn. How am I going to dig through all these logs? Go for the low hanging fruit. Splunk has a <em>Patterns</em> tab to find common occurrences in your data. A click reveals the most common appearing around 2000 times. Just about half of the syslog is clogged up by this event. What could it be? Let’s take a (redacted) look.</p>
 
@@ -34,5 +34,7 @@ The only way I know to tell for sure what is going on is to run “wireshark” 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ufw deny to 244.0.0.1
 </code></pre></div></div>
 
-<p>Time will tell whether my logs will be cleaned. Well actually, Splunk will tell me. Since Splunk dynamically pulls the syslog and reads those events, I can set up an alert that will send me an email when the event in question exceeds a certain threshold. No news will be good news.</p>
+<p>Time will tell whether my logs will be cleaned. Well actually, Splunk will tell me. Since Splunk dynamically pulls the syslog and reads those events, I can set up an alert that will send me an email when the event in question exceeds a certain threshold.</p>
+
+<p>No news will be good news.</p>
 :ET
