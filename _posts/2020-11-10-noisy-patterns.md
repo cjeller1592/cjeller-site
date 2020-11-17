@@ -40,4 +40,6 @@ How do I get around this noise? Creating a firewall wall to deny traffic going o
 ufw deny to 244.0.0.1
 ```
 
-Time will tell whether my logs will be cleaned. Well actually, Splunk will tell me. Since Splunk dynamically pulls the syslog and reads those events, I can set up an alert that will send me an email when the event in question exceeds a certain threshold. No news will be good news.
+Time will tell whether my logs will be cleaned. Well actually, Splunk will tell me. Since Splunk dynamically pulls the syslog and reads those events, I can set up an alert that will send me an email when the event in question exceeds a certain threshold.
+
+No news will be good news.
