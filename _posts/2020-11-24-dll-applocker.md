@@ -4,7 +4,7 @@ title: DLL Hijacking & AppLocker
 summary: Figuring out how to get around AppLocker by using DLL Hijacking.
 ---
 
-I wanted to take the AppLocker lab from the *Getting Started in Security* class off-road a bit. I started by asking a single question:
+I recently took the *Getting Started in Security* class from [Wild West Hackin' Fest](https://wildwesthackinfest.com/training/) and wanted to continue from where the first lab left off. In the words of the class' instructor John Strand, I wanted to go off-road a bit with AppLocker. I started by asking a single question:
 
 > How could an attacker bypass AppLocker?
 
